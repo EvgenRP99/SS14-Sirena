@@ -1,6 +1,7 @@
-﻿## Species Names
+## Species Names
 
-species-name-human = Human
-species-name-dwarf = Dwarf
-species-name-reptilian = Reptilian
-species-name-slime = Slime Person
+species-name-human = Человек
+species-name-dwarf = Дварф
+species-name-reptilian = Унатх
+species-name-slime = Слаймолюд
+species-name-diona = Диона

@@ -1,43 +1,46 @@
-
 ## Traitor
 
 # Shown at the end of a round of Traitor
-traitor-round-end-result = {$traitorCount ->
-    [one] There was one traitor.
-    *[other] There were {$traitorCount} traitors.
-}
-
+traitor-round-end-result =
+    { $traitorCount ->
+        [one] Был один предатель.
+       *[other] Было { $traitorCount } предателей.
+    }
 # Shown at the end of a round of Traitor
-traitor-user-was-a-traitor = [color=gray]{$user}[/color] was a traitor.
-traitor-user-was-a-traitor-named = [color=White]{$name}[/color] ([color=gray]{$user}[/color]) was a traitor.
-traitor-was-a-traitor-named = [color=White]{$name}[/color] was a traitor.
-
-traitor-user-was-a-traitor-with-objectives = [color=gray]{$user}[/color] was a traitor who had the following objectives:
-traitor-user-was-a-traitor-with-objectives-named = [color=White]{$name}[/color] ([color=gray]{$user}[/color]) was a traitor who had the following objectives:
-traitor-was-a-traitor-with-objectives-named = [color=White]{$name}[/color] was a traitor who had the following objectives:
-
-preset-traitor-objective-issuer-syndicate = [color=#87cefa]The Syndicate[/color]
-
+traitor-user-was-a-traitor = [color=gray]{ $user }[/color] был(а) предателем.
+traitor-user-was-a-traitor-named = [color=White]{ $name }[/color] ([color=gray]{ $user }[/color]) был(а) предателем.
+traitor-was-a-traitor-named = [color=White]{ $name }[/color] был(а) предателем.
+traitor-user-was-a-traitor-with-objectives = [color=gray]{ $user }[/color] был(а) предателем, у которого(-ой) были следующие цели:
+traitor-user-was-a-traitor-with-objectives-named = [color=White]{ $name }[/color] ([color=gray]{ $user }[/color]) был(а) предателем, у которого(-ой) были следующие цели:
+traitor-was-a-traitor-with-objectives-named = [color=White]{ $name }[/color] был(а) предателем, у которого(-ой) были следующие цели:
+preset-traitor-objective-issuer-syndicate = [color=#87cefa]Синдикат[/color]
 # Shown at the end of a round of Traitor
-traitor-objective-condition-success = {$condition} | [color={$markupColor}]Success![/color]
-
+traitor-objective-condition-success = { $condition } | [color={ $markupColor }]Успех![/color]
 # Shown at the end of a round of Traitor
-traitor-objective-condition-fail = {$condition} | [color={$markupColor}]Failure![/color] ({$progress}%)
-
-traitor-title = Traitor
-traitor-description = There are traitors among us...
-traitor-not-enough-ready-players = Not enough players readied up for the game! There were {$readyPlayersCount} players readied up out of {$minimumPlayers} needed.
-traitor-no-one-ready = No players readied up! Can't start Traitor.
+traitor-objective-condition-fail = { $condition } | [color={ $markupColor }]Провал![/color] ({ $progress }%)
+traitor-title = Предатель
+traitor-description = Среди нас есть предатели...
+traitor-not-enough-ready-players = Недостаточно игроков готовы к игре! Из { $minimumPlayers } необходимых игроков готовы { $readyPlayersCount }.
+traitor-no-one-ready = Нет готовых игроков! Не удалось начать режим Предателя.
 
 ## TraitorDeathMatch
-traitor-death-match-title = Traitor Deathmatch
-traitor-death-match-description = Everyone's a traitor. Everyone wants each other dead.
-traitor-death-match-station-is-too-unsafe-announcement = The station is too unsafe to continue. You have one minute.
-traitor-death-match-end-round-description-first-line = The PDAs recovered afterwards...
-traitor-death-match-end-round-description-entry = {$originalName}'s PDA, with {$tcBalance} TC
+
+traitor-death-match-title = Бой насмерть предателей
+traitor-death-match-description = Все — предатели. Все хотят смерти друг друга.
+traitor-death-match-station-is-too-unsafe-announcement = На станции слишком опасно, чтобы продолжать. У вас есть одна минута.
+traitor-death-match-end-round-description-first-line = КПК были восстановлены...
+traitor-death-match-end-round-description-entry = КПК { $originalName }, с { $tcBalance } ТК
 
 ## TraitorRole
 
 # TraitorRole
-traitor-role-greeting = You are a syndicate agent. Your objectives and codewords are listed in the character menu. Use the uplink loaded into your PDA to buy the tools you'll need for this mission.
-traitor-role-codewords = Codewords can be used in regular conversation to identify yourself discretely to other syndicate agents. The syndicate codewords are: {$codewords}
+traitor-role-greeting =
+    Вы - агент Синдиката.
+    Ваши цели и кодовые слова перечислены в меню персонажа.
+    Воспользуйтесь аплинком, встроенным в ваш КПК, чтобы приобрести всё необходимое для выполнения работы.
+    Смерть Nanotrasen!
+traitor-role-codewords =
+    Кодовые слова следующие:
+    { $codewords }
+    Кодовые слова можно использовать в обычном разговоре, чтобы незаметно идентифицировать себя для других агентов Синдиката.
+    Прислушивайтесь к ним и храните их в тайне.
