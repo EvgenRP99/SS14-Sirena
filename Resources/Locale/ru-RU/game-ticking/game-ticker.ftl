@@ -1,26 +1,40 @@
-game-ticker-restart-round = Restarting round...
-game-ticker-start-round = The round is starting now...
-game-ticker-start-round-cannot-start-game-mode-fallback = Failed to start {$failedGameMode} mode! Defaulting to {$fallbackMode}...
-game-ticker-start-round-cannot-start-game-mode-restart = Failed to start {$failedGameMode} mode! Restarting round...
-game-ticker-unknown-role = Unknown
-game-ticker-delay-start = Round start has been delayed for {$seconds} seconds.
-game-ticker-pause-start = Round start has been paused.
-game-ticker-pause-start-resumed = Round start countdown is now resumed.
-game-ticker-player-join-game-message = Welcome to Space Station 14! If this is your first time playing, be sure to read the game rules, and don't be afraid to ask for help in LOOC (local OOC) or OOC (usually available only between rounds).
-game-ticker-get-info-text = Hi and welcome to [color=white]Space Station 14![/color]
-                            The current round is: [color=white]#{$roundId}[/color]
-                            The current player count is: [color=white]{$playerCount}[/color]
-                            The current map is: [color=white]{$mapName}[/color]
-                            The current game mode is: [color=white]{$gmTitle}[/color]
-                            >[color=yellow]{$desc}[/color]
-game-ticker-no-map-selected = [color=red]No map selected![/color]
-game-ticker-player-no-jobs-available-when-joining = When attempting to join to the game, no jobs were available.
-
+game-ticker-restart-round = Перезапуск раунда...
+game-ticker-start-round = Раунд начинается...
+game-ticker-start-round-cannot-start-game-mode-fallback = Не удалось запустить режим { $failedGameMode }! Запускаем { $fallbackMode }...
+game-ticker-start-round-cannot-start-game-mode-restart = Не удалось запустить режим { $failedGameMode }! Перезапуск раунда...
+game-ticker-unknown-role = Неизвестный
+game-ticker-delay-start = Начало раунда было отложено на { $seconds } секунд.
+game-ticker-pause-start = Начало раунда было приостановлено.
+game-ticker-pause-start-resumed = Отсчет начала раунда возобновлен.
+game-ticker-player-join-game-message = Добро пожаловать на Космическую Станцию 14! Если вы играете впервые, обязательно нажмите ESC на клавиатуре и прочитайте правила игры, а также не бойтесь просить помощи в "Админ помощь".
+game-ticker-get-info-text =
+    Привет и добро пожаловать в [color=white]Space Station 14![/color]
+    Текущий раунд: [color=white]#{ $roundId }[/color]
+    Текущее количество игроков: [color=white]{ $playerCount }[/color]
+    Текущая карта: [color=white]{ $mapName }[/color]
+    Текущий режим игры: [color=white]{ $gmTitle }[/color]
+    >[color=yellow]{ $desc }[/color]
+game-ticker-get-info-preround-text =
+    Привет и добро пожаловать в [color=white]Space Station 14![/color]
+    Текущий раунд: [color=white]#{ $roundId }[/color]
+    Текущее количество игроков: [color=white]{ $playerCount }[/color] ([color=white]{ $readyCount }[/color] { $readyCount ->
+        [one] готов
+       *[other] готовы
+    })
+    Текущая карта: [color=white]{ $mapName }[/color]
+    Текущий режим игры: [color=white]{ $gmTitle }[/color]
+    >[color=yellow]{ $desc }[/color]
+game-ticker-no-map-selected = [color=red]Карта ещё не выбрана![/color]
+game-ticker-player-no-jobs-available-when-joining = При попытке присоединиться к игре ни одной роли не было доступно.
 # Displayed in chat to admins when a player joins
-player-join-message = Player {$name} joined the server!
-
+player-join-message = Игрок { $name } присоединился к серверу!
 # Displayed in chat to admins when a player leaves
-player-leave-message = Player {$name} left the server!
-
-latejoin-arrival-announcement = {$character} ({$job}) has arrived at the station!
-latejoin-arrival-sender = Station
+player-leave-message = Игрок { $name } покинул сервер!
+latejoin-arrival-announcement =
+    { $character } ({ $job }) { $gender ->
+        [male] прибыл
+        [female] прибыла
+        [epicene] прибыли
+       *[neuter] прибыл
+    } на станцию!
+latejoin-arrival-sender = Станции

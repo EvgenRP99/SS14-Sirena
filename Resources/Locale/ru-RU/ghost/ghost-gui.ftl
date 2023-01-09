@@ -1,14 +1,20 @@
-ghost-gui-return-to-body-button = Return to body
-ghost-gui-ghost-warp-button = Ghost Warp
-ghost-gui-ghost-roles-button = Ghost Roles ({$count})
-
-ghost-target-window-title = Ghost Warp
-ghost-target-window-current-button = Warp: {$name}
-
-ghost-roles-window-title = Ghost Roles
-ghost-roles-window-request-role-button = Request
-ghost-roles-window-request-role-button-timer = Request ({$time}s)
-ghost-roles-window-follow-role-button = Follow
-ghost-roles-window-no-roles-available-label = There are currently no available ghost roles.
-ghost-roles-window-rules-footer = The button will enable after {$time} seconds (this delay is to make sure you read the rules).
-
+ghost-gui-return-to-body-button = Вернуться в тело
+ghost-gui-ghost-warp-button = Телепорт призрака
+ghost-gui-ghost-roles-button = Роли призраков ({ $count })
+ghost-gui-toggle-ghost-visibility-name = Переключить призраков
+ghost-gui-toggle-ghost-visibility-desc = Переключить видимость других призраков.
+ghost-gui-toggle-ghost-visibility-popup = Видимость других призраков была изменена.
+ghost-gui-toggle-lighting-manager-name = Переключить освещение
+ghost-gui-toggle-lighting-manager-desc = Включите или отключите рендеринг света, чтобы лучше видеть затенённые области.
+ghost-gui-toggle-lighting-manager-popup = Рендеринг света был переключён.
+ghost-gui-toggle-fov-name = Переключить поле зрения
+ghost-gui-toggle-fov-desc = Переключить поле зрения чтобы видеть то же, что и игроки.
+ghost-gui-toggle-fov-popup = Поле зрения было переключено.
+ghost-target-window-title = Телепорт призрака
+ghost-target-window-current-button = Телепорт в: { $name }
+ghost-roles-window-title = Роли призраков
+ghost-roles-window-request-role-button = Запросить
+ghost-roles-window-request-role-button-timer = Запросить ({ $time }сек.)
+ghost-roles-window-follow-role-button = Следовать
+ghost-roles-window-no-roles-available-label = В настоящее время нет доступных ролей призраков.
+ghost-roles-window-rules-footer = Кнопка станет доступна через { $time } секунд (эта задержка нужна, чтобы убедиться, что вы прочитали правила).
