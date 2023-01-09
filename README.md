@@ -1,33 +1,33 @@
-# Base Station 14
+<p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>
 
-Give your [Space Station 14](https://github.com/space-wizards/space-station-14) fork a stable foundation.
+Space Station 14 это ремейк SS13, который работает на собственном движке [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), написанном на C#.
 
-**Base Station 14** provides stable branches of Space Station 14 that you can use to build your fork.
-A stable branch is cut from a specific upstream revision and is only updated with bug fixes and low-risk content (e.g. sprites and YAML) changes that do not break your fork's content.
+Это репозиторий первого русскоязычного ЕРП сервера по Space Station 14, целью которого является перенос ЕРП контента из Space Station 13, поддержка актуальных изменений из основного репозитория, а так же добавление собственных изменений по необходимости.
 
-## Using Base Station 14 In Your Fork
-To start a new fork using **Base Station 14**, simply clone this repository and check out the branch you want to start with.
+## Ссылки
 
-If you have an existing fork:
+[Наш Discord](https://discord.gg/jCG9kdXyvf) | [Основная вики русскоязычного коммьюнити](https://wiki.station14.ru) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/) | [Основной англоязычный репозиторий](https://github.com/space-wizards/space-station-14) | [Основной русскоязычный репозиторий](https://github.com/space-syndicate/space-station-14)
 
-1. Add **Base Station 14** as a remote in your repository.
-2. Then, find the closest **Base Station 14** branch to your last upstream rebase or merge.
-3. Rebase or merge with the **Base Station 14** branch that you want to use.
+## Документация
 
-## Stable Branches
+На официальном сайте с [документацией](https://docs.spacestation14.io/) имеется вся необходимая информация о контенте SS14, движке, дизайне игры и многом другом. Также имеется много информации для начинающих разработчиков.
 
-- `basestation/v1/stable`: Cut from upstream [9a38736c3c](https://github.com/space-wizards/space-station-14/commit/9a38736c3c) on 2022-10-22 (*To see changes:* `git log --oneline 9a38736c3c..basestation/v1/stable`)
+## Контрибьют
 
-## Contributing
-Stable branches will only be updated with upstream bug fixes and low-risk content updates.
+В случае если вы хотите добавить новый контент обсудите его необходимость на нашем сервере [Discord](https://discord.gg/jCG9kdXyvf).
 
-We accept patches (`git format-patch`) or fast-forward-only pull requests to the `current` branch (e.g. `basestation/v1/current`).
+## Сборка
 
-If a bug fix is not available upstream, we will consider it for inclusion if it is also upstreamed, if applicable.
+1. Склонируйте этот репозиторий локально
+2. Запустите `RUN_THIS.py` для инициализации подмодулей и скачивания движка.
+3. Скомпилируйте проект.
 
-## Patch Kits
-**Base Station 14** consists of only upstream content.
-However, common content from the **Nanotrasen Fork Network** targeting specific **Base Station 14** stable branches are available.
-To add patch kit content, cherry-pick the appropriate patch kit matching your stable branch version.
+[Более подробная инструкция по запуску проекта.](https://docs.spacestation14.io/getting-started/dev-setup)
 
-- `ladders`: allow your players to travel from location to location or map to map: `git cherry-pick basestation/v1/ladders`
+## Лицензия
+
+Весь код репозитория лицензирован под [MIT](https://github.com/space-syndicate/space-station-14/blob/master/LICENSE.TXT).
+
+Большинство ассетов лицензированы под [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), если не указано иное. Ассеты имеют свою лицензию и авторские права в файле метаданных.[Пример](https://github.com/ZettaProtocol/SS14-Sirena/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json) 
+
+Обратите внимание, что некоторые ассеты лицензированы на некоммерческой основе [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) или аналогичной некоммерческой лицензией, и их необходимо удалить, если вы хотите использовать этот проект в коммерческих целях.
