@@ -14,7 +14,6 @@ using Content.Shared.Doors.Systems;
 using Content.Shared.Popups;
 using Microsoft.Extensions.Options;
 using Robust.Server.GameObjects;
-using Robust.Shared.Map.Components;
 using Robust.Shared.Player;
 
 namespace Content.Server.Doors.Systems
