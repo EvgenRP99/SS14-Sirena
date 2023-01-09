@@ -49,7 +49,7 @@ namespace Content.Server.Communications
         /// Announce on all grids (for nukies)
         /// </summary>
         [DataField("global")]
-        public bool AnnounceGlobal = false;
+        public bool AnnounceGlobal = true;
 
         /// <summary>
         /// Announce sound file path
