@@ -317,4 +317,3 @@ public sealed class DoorSystem : SharedDoorSystem
 
 public sealed class PryFinishedEvent : EntityEventArgs { }
 public sealed class PryCancelledEvent : EntityEventArgs { }
-
