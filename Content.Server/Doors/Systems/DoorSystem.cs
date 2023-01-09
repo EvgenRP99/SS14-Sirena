@@ -105,10 +105,16 @@ public sealed class DoorSystem : SharedDoorSystem
         if (predicted && predictingPlayer == null)
             return;
 
+        var filter = Filter.Pvs(uid);
+
         if (predicted)
-            Audio.PlayPredicted(soundSpecifier, uid, predictingPlayer, audioParams);
-        else
-            Audio.PlayPvs(soundSpecifier, uid, audioParams);
+        {
+            // This interaction is predicted, but only by the instigating user, who will have played their own sounds.
+            filter.RemoveWhereAttachedEntity(e => e == predictingPlayer);
+        }
+
+        // send the sound to players.
+        Audio.Play(soundSpecifier, filter, uid, audioParams);
     }
 
 #region DoAfters
@@ -190,7 +196,7 @@ public sealed class DoorSystem : SharedDoorSystem
                 return true;
         }
 
-        var modEv = new DoorGetPryTimeModifierEvent(user);
+        var modEv = new DoorGetPryTimeModifierEvent();
         RaiseLocalEvent(target, modEv, false);
 
         door.BeingPried = true;
@@ -311,4 +317,3 @@ public sealed class DoorSystem : SharedDoorSystem
 
 public sealed class PryFinishedEvent : EntityEventArgs { }
 public sealed class PryCancelledEvent : EntityEventArgs { }
-
