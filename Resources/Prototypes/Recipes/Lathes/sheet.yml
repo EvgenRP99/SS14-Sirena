@@ -87,7 +87,7 @@
   id: SheetPlasma30
   icon:
     sprite: Objects/Materials/Sheets/other.rsi
-    state: plasma_3
+    state: plasma
   result: SheetPlasma
   completetime: 2
   materials:
